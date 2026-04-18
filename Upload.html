@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uganda Top Hits 2026</title>
+    <link rel="stylesheet" href="Upload.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="yaps-header">
+        <!-- Row 1: Trending Horizontal Scroll -->
+        <div class="row-trending">
+            <div class="scroll-container" id="trendingScroll">
+                <a href="">🔥 News</a>
+                <a href="Upload.html">🎤 Artists</a>
+                <a href="">🎧 Audio</a>
+                <a href="Upload.html">📈 Hot 100</a>
+                <a href="#">💿 New Releases</a>
+                <a href="#">🎙️ Podcasts</a>
+                <a href="#">🌍 Global Charts</a>
+                <a href="#">My Library</a>
+                <a href="#">Premium</a>
+                <a href="#">Support</a>
+                <a href="#">Create Music</a>
+              
+            </div>
+        </div>
+
+        <!-- Row 2: Main Branding & Search -->
+        <div class="row-main">
+            <div class="nav-left">
+                <button class="hamburger-btn" id="menuToggle">☰</button>
+                <div class="log">YAPS <span class="music">MUSIC</span></div>
+            </div>
+
+
+<div class="audio-search-container">
+    <div class="search-wrapper">
+        <input type="text" placeholder="Search for songs or artists..." class="search-input">
+        <button id="record-btn" class="record-button" title="Search by voice or song">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+            </svg>
+        </button>
+      <button class="search-btn"><i class="fas fa-search"></i>Search</button>
+    </div>
+    <p id="status-text" class="status-message">Click the mic to record</p>
+</div>
+
+
+            <!-- Row 3: Primary Links (Desktop) -->
+            <nav class="row-services" id="desktopNav">
+                <a href="Index.html" class="active">Home</a>
+                <a href="songs.html">Music</a>
+                <a href="#">Videos</a>
+                <a href="#">Live</a>
+                <a href="About us.html">About</a>
+            </nav>
+
+            <!-- Mobile Side Drawer -->
+            <div class="side-drawer" id="sideDrawer">
+                <button class="close-btn" id="closeMenu">✕</button>
+                <a href="Index.html">Home</a>
+                <a href="songs.html">Music</a>
+                <a href="#">Videos</a>
+                <a href="About us.html">About</a>
+                <a href="#">Radio</a>
+                <a href="#">My Library</a>
+                <a href="#">Premium</a>
+                <a href="#">Podcasts</a>
+                <a href="#">My Library</a>
+                <a href="#">Premium</a>
+                <a href="#">Support</a>
+                <a href="#">Create Music</a>
+              
+            </div>
+
+
+            <div class="nav-right">
+                
+                <!-- Personal Image Profile -->
+                <div class="profile-icon" id="profileBtn">
+                    <img src="Assets/IMAGE/yapdev.png" alt="Profile" class="profile-img">
+                </div>
+            </div>
+    </header>
+
+    <section class="contact">
+     <h2>Upload New 2026 Track</h2>
+        <div class="contact-layout">
+            <div class="glass-card info-side">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> contact@yapsmusic.com</p>
+                <p><i class="fas fa-globe"></i> www.yapsmusic.com</p>
+            </div>
+            <form class="glass-card contact-form" id="contactForm">
+                <input type="text" name="artist" placeholder="Artist Name" required>
+                <input type="text" name="title" placeholder="Song Title" required>
+                  <input type="file" name="songFile" accept=".mp3" required>
+                <button type="submit" class="btn">Upload to Server</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

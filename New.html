@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+<!-- Bottom Music Player Bar -->
+<div class="player-bar">
+    <div class="player-container">
+        <!-- Song Info -->
+        <div class="now-playing">
+            <img src="https://via.placeholder.com" alt="Cover" class="player-album-art">
+            <div class="track-details">
+                <span class="track-name">Ugandan Anthem</span>
+                <span class="artist-name">Top Artist</span>
+            </div>
+        </div>
+
+        <!-- Player Controls -->
+        <div class="player-controls">
+            <button class="ctrl-btn"><i class="fas fa-step-backward"></i></button>
+            <button class="play-pause-btn"><i class="fas fa-play"></i></button>
+            <button class="ctrl-btn"><i class="fas fa-step-forward"></i></button>
+            
+            <div class="progress-container">
+                <span>0:00</span>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span>3:45</span>
+            </div>
+        </div>
+
+        <!-- Volume & Actions -->
+        <div class="player-actions">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" class="volume-slider">
+            <button class="expand-btn"><i class="fas fa-expand"></i></button>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Login Modal -->
+<div class="login-modal" id="loginModal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Login to Yaps Music</h2>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="auth-submit">Login</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="login-modal" id="loginModal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        
+        <!-- Toggle Tabs -->
+        <div class="tab-box">
+            <button class="tab-btn active" id="login-tab">Login</button>
+            <button class="tab-btn" id="register-tab">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form">
+            <h2>Welcome Back</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="auth-submit">Login</button>
+        </form>
+
+        <!-- Register Form (Hidden by default) -->
+        <form id="register-form" style="display: none;">
+            <h2>Create Account</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="auth-submit">Join Yaps Music</button>
+        </form>
+    </div>
+</div>
+
+<!-- Persistent Bottom Player Bar -->
+<footer class="music-player-bar">
+  <div class="player-content">
+    <!-- Song Info -->
+    <div class="now-playing">
+      <img src="https://via.placeholder.com" alt="Album Art" class="album-art">
+      <div class="track-info">
+        <span class="track-name">Blinding Lights</span>
+        <span class="artist-name">The Weeknd</span>
+      </div>
+      <button class="heart-icon">♡</button>
+    </div>
+
+    <!-- Central Controls -->
+    <div class="player-controls">
+      <div class="control-buttons">
+        <button id="shuffle">🔀</button>
+        <button id="prev">⏮</button>
+        <button id="play-pause" class="main-play">▶</button>
+        <button id="next">⏭</button>
+        <button id="repeat">🔁</button>
+      </div>
+      <div class="progress-container">
+        <span class="time">0:00</span>
+        <input type="range" class="progress-bar" value="0" max="100">
+        <span class="time">3:20</span>
+      </div>
+    </div>
+
+    <!-- Volume & Utility -->
+    <div class="utility-controls">
+      <button>🎤</button>
+      <button>≣</button>
+      <button>💻</button>
+      <div class="volume-wrapper">
+        <span>🔊</span>
+        <input type="range" class="volume-bar" value="70" max="100">
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Hidden Audio Element -->
+<audio id="main-audio" src="your-music-file.mp3"></audio>
+
+
+
+</body>
+</html>

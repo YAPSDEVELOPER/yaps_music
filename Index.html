@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaps Music | Ugandan Hits</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="Scrip.js" defer></script>
+    <script src="Small.js" defer></script>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <header class="yaps-header">
+        <!-- Row 1: Trending Horizontal Scroll -->
+        <div class="row-trending">
+            <div class="scroll-container" id="trendingScroll">
+                <a href="">🔥 News</a>
+                <a href="Upload.html">🎤 Artists</a>
+                <a href="">🎧 Audio</a>
+                <a href="Upload.html">📈 Hot 100</a>
+                <a href="#">💿 New Releases</a>
+                <a href="#">🎙️ Podcasts</a>
+                <a href="#">🌍 Global Charts</a>
+                <a href="#">My Library</a>
+                <a href="#">Premium</a>
+                <a href="#">Support</a>
+                <a href="#">Create Music</a>
+              
+            </div>
+        </div>
+
+        <!-- Row 2: Main Branding & Search -->
+        <div class="row-main">
+            <div class="nav-left">
+                <button class="hamburger-btn" id="menuToggle">☰</button>
+                <div class="log">YAPS <span class="music">MUSIC</span></div>
+            </div>
+
+
+<div class="audio-search-container">
+    <div class="search-wrapper">
+        <input type="text" placeholder="Search for songs or artists..." class="search-input">
+        <button id="record-btn" class="record-button" title="Search by voice or song">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+            </svg>
+        </button>
+      <button class="search-btn"><i class="fas fa-search"></i>Search</button>
+    </div>
+    <p id="status-text" class="status-message">Click the mic to record</p>
+</div>
+
+
+            <!-- Row 3: Primary Links (Desktop) -->
+            <nav class="row-services" id="desktopNav">
+                <a href="Index.html" class="active">Home</a>
+                <a href="Songs.html">Music</a>
+                <a href="#">Videos</a>
+                <a href="#">Live</a>
+                <a href="About us.html">About</a>
+            </nav>
+
+            <!-- Mobile Side Drawer -->
+            <div class="side-drawer" id="sideDrawer">
+                <button class="close-btn" id="closeMenu">✕</button>
+                <a href="Index.html">Home</a>
+                <a href="songs.html">Music</a>
+                <a href="#">Videos</a>
+                <a href="About us.html">About</a>
+                <a href="#">Radio</a>
+                <a href="#">My Library</a>
+                <a href="#">Premium</a>
+                <a href="#">Podcasts</a>
+                <a href="#">My Library</a>
+                <a href="#">Premium</a>
+                <a href="#">Support</a>
+                <a href="#">Create Music</a>
+              
+            </div>
+
+
+            <div class="nav-right">
+                
+                <!-- Personal Image Profile -->
+                <div class="profile-icon" id="profileBtn">
+                    <img src="Assets/IMAGE/yapdev.png" alt="Profile" class="profile-img">
+                </div>
+            </div>
+    </header>
+
+<section class="hero-section">
+    <div class="hero-glass-container">
+        <div class="public-search-wrapper">
+
+<div class="audio-search-container">
+    <div class="search-wrapper">
+        <input type="text" placeholder="Search for songs or artists..." class="search-input">
+        <button id="record-btn" class="record-button" title="Search by voice or song">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+            </svg>
+        </button>
+      <button class="search-btn"><i class="fas fa-search"></i>Search</button>
+    </div>
+    <p id="status-text" class="status-message">Click the mic to record</p>
+</div>
+
+            <div class="quick-tags">
+                <span>Trending:</span>
+                <a href="#">#Afrobeat</a> <a href="#">#Amapiano</a> <a href="#">#Vinka</a>
+            </div>
+        </div>
+
+        <div class="artist-card-box">
+            <div class="image-box">
+                <img src="Assets/IMAGE/Hero image.png" alt="Hero Image" class="img-box">
+                <span class="badge">Vinka</span>
+            </div>
+            
+            <h1 class="song-name">Lalala</h1>
+            
+            <div class="action-buttons">
+                <button class="btn-play"><i class="fas fa-play"></i> PLAY</button>
+                <a href="Assets/Audio/Lalala - Vinka (erycom)_1760199311.mp3" download class="btn-download">
+                    <i class="fas fa-arrow-down arrow-bounce"></i> Download
+                </a>
+            </div>
+        </div>
+
+        <div class="status-stack">
+            <div class="status-item new-release">
+                <a href="songs.html">
+                    <h3>View Songs</h3>
+                    <i class="fas fa-music background-icon"></i>
+                </a>
+                <div class="music-bars">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="status-item public-stats">
+                <div class="stat-content">
+                    <span class="live-dot"></span>
+                    <p><strong>1.2k</strong> Listening Now</p>
+                </div>
+            </div>
+
+            <div class="status-item trending-now">
+                <a href="Upload.html">
+                    <h3>Upload Music <i class="fas fa-fire"></i></h3>
+                    <i class="fas fa-chart-line background-icon"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-contact-footer">
+            <p class="ticker">
+                <span>NEW: Elijah Kitaka - "Daily Bundle" is now trending! | </span>
+                For Any Missing song Please Contact us on Whatsapp Number: 
+                <a href="tel:0784729944">0784729944 / 0753739754</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+    <section class="family-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Family <span>(Top 100 Artists)</span></h2>
+                <div class="scroll-instructions">Swipe to view more →</div>
+            </div>
+
+            <div class="artist-scroll-container">
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name"></h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+
+                <!-- Artist 2 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/DRI_1328-1.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Vinka</h4>
+                    <span class="artist-status">Verified</span>
+                </div>
+
+                <!-- Artist 3 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/Azawi3.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Azawi</h4>
+                    <span class="artist-status">Trending</span>
+                </div>
+
+                <!-- Artist 4 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/sheebah.jpg" alt="Queen sheeba" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Sheebah</h4>
+                    <span class="artist-status">Queen</span>
+                </div>
+
+                <!-- Add more profiles up to 100 here -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/bobi wine.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Bobi Wine</h4>
+                    <span class="artist-status">Icon</span>
+                </div>
+
+
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/remanamakula.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Rema Namakula</h4>
+                    <span class="artist-status">sinior</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/johnblk.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">John Blaq</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/palaso.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Pallaso</h4>
+                    <span class="artist-status">Trending</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/victor.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Victor Ruz</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+                <!-- Artist 1 -->
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Eddy Kenzo</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+
+
+
+
+                <div class="artist-profile">
+                    <div class="profile-img-wrapper">
+                        <img src="Assets/IMAGE/josechamillion.jpg" alt="Artist Name" class="artist-img">
+                    </div>
+                    <h4 class="artist-name">Jose Chameleone</h4>
+                    <span class="artist-status">Legend</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Artist Bio Modal -->
+        <div id="bio-modal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-header-info">
+                        <img id="modal-img" src="" alt="Artist">
+                        <div class="text-info">
+                            <h2 id="modal-name">Artist Name</h2>
+                            <p id="modal-status">Artist Status</p>
+                              </div>
+                               </div>
+                                 <div class="bio-text">
+                                  <h3>Biography</h3>
+                                    <p id="modal-description">This artist is a legend in 
+                                        the Ugandan music industry,
+                                         known for hit songs and cultural impact.</p>
+                                        </div>
+                                     <div class="modal-top-tracks">
+                                  <h3>Top Tracks</h3>
+                               <ul id="modal-tracks">
+                            <li><i class="fas fa-music"></i> Loading hits...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="new-releases" id="ney`  `w-releases">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">New Released Albums</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="album-grid">
+                <!-- Album 1 -->
+                <div class="album-card">
+                    <div class="album-img">
+                        <img src="Assets/IMAGE/remanamakula.jpg" alt="Album Cover" class="card-img">
+                        <div class="album-overlay">
+                            <button class="play-btn-trigger" data-src="album1.mp3">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="card-title">Love & Light</h3>
+                        <p class="card-artist">Vinka</p>
+                    </div>
+                </div>
+
+                <!-- Album 2 -->
+                <div class="album-card">
+                    <div class="album-img">
+                        <img src="Assets/IMAGE/edykenzo.jpg" alt="Album Cover" class="card-img">
+                        <div class="album-overlay">
+                            <button class="play-btn-trigger" data-src="album2.mp3">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="card-title">African Banger</h3>
+                        <p class="card-artist">Eddy Kenzo</p>
+                    </div>
+                </div>
+
+                <!-- Repeat for Albums 3 to 6 -->
+                <div class="album-card">
+                    <div class="album-img">
+                        <img src="Assets/IMAGE/remanamakula.jpg" alt="Album Cover" class="card-img">
+                        <div class="album-overlay"><button class="play-btn-trigger" data-src="3.mp3"><i
+                                    class="fas fa-play"></i></button></div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="card-title">Kampala Vibes</h3>
+                        <p class="card-artist">Sheebah</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-img">
+                        <img src="Assets/IMAGE/johnblk.jpg" alt="Album Cover" class="card-img">
+                        <div class="album-overlay"><button class="play-btn-trigger" data-src="4.mp3"><i
+                                    class="fas fa-play"></i></button></div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="card-title">Angellah</h3>
+                        <p class="card-artist">Azawi</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-img">
+                        <img src="Assets/IMAGE/palaso.jpg" alt="Album Cover" class="card-img">
+                        <div class="album-overlay"><button class="play-btn-trigger" data-src="5.mp3"><i
+                                    class="fas fa-play"></i></button></div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="card-title">Mpa Love</h3>
+                        <p class="card-artist">A Pass</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-img">
+                        <img src="Assets/IMAGE/josekamil.jpg" alt="Album Cover" class="card-img">
+                        <div class="album-overlay"><button class="play-btn-trigger" data-src="6.mp3"><i
+                                    class="fas fa-play"></i></button></div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="card-title">The Legend</h3>
+                        <p class="card-artist">Chameleone</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="trending-section" id="trending">
+        <div class="container">
+            <h2 class="section-title">Trending Top 5</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            <div class="trending-list">
+                <!-- Song 1 -->
+                <div class="trending-item">
+                    <div class="rank">01</div>
+                    <div class="trending-info">
+                        <img src="Assets/IMAGE/sitya loss.jpg" alt="Cover" class="card-img">
+                        <div class="details">
+                            <h4 class="card-title">Sitya Loss</h4>
+                            <p class="card-artist">Eddy Kenzo</p>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <span class="play-count"><i class="fas fa-headphones"></i> 1.2M plays</span>
+                        <button class="play-btn-trigger" data-src="trending1.mp3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Song 2 -->
+                <div class="trending-item">
+                    <div class="rank">02</div>
+                    <div class="trending-info">
+                        <img src="Assets/IMAGE/bailando.jpg" alt="Cover" class="card-img">
+                        <div class="details">
+
+                            <h4 class="card-title">Bailando</h4>
+                            <p class="card-artist">Vinka</p>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <span class="play-count"><i class="fas fa-headphones"></i> 850K plays</span>
+                        <button class="play-btn-trigger" data-src="trending2.mp3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Song 3 -->
+                <div class="trending-item">
+                    <div class="rank">03</div>
+                    <div class="trending-info">
+                        <img src="Assets/IMAGE/Azawi maje.jpg" alt="Cover" class="card-img">
+                        <div class="details">
+                            <h4 class="card-title">Majje</h4>
+                            <p class="card-artist">Azawi ft. Fik Fameica</p>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <span class="play-count"><i class="fas fa-headphones"></i> 720K plays</span>
+                        <button class="play-btn-trigger" data-src="trending3.mp3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Song 4 -->
+                <div class="trending-item">
+                    <div class="rank">04</div>
+                    <div class="trending-info">
+                        <img src="https://via.placeholder.com" alt="Cover" class="card-img">
+                        <div class="details">
+                            <h4 class="card-title">Malaika</h4>
+                            <p class="card-artist">Vinka</p>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <span class="play-count"><i class="fas fa-headphones"></i> 640K plays</span>
+                        <button class="play-btn-trigger" data-src="trending4.mp3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Song 5 -->
+                <div class="trending-item">
+                    <div class="rank">05</div>
+                    <div class="trending-info">
+                        <img src="Assets/IMAGE/sheebah.jpg" alt="Cover" class="card-img">
+                        <div class="details">
+                            <h4 class="card-title">Weekend</h4>
+                            <p class="card-artist">Sheebah</p>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <span class="play-count"><i class="fas fa-headphones"></i> 510K plays</span>
+                        <button class="play-btn-trigger" data-src="trending5.mp3">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="discover-news">
+        <div class="container discover-grid">
+
+            <!-- Left: YouTube & Social Discover -->
+            <div class="discover-box">
+                <h2 class="section-title">Discover More</h2>
+                <p class="discover-text">Watch latest music videos and exclusive interviews on our official channels.
+                </p>
+
+                <div class="social-cards">
+                    <a href="https://youtube.com" target="_blank" class="discover-card yt">
+                        <i class="fab fa-youtube"></i>
+                        <span>Official YouTube</span>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="discover-card ig">
+                        <i class="fab fa-instagram"></i>
+                        <span>Latest Stories</span>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="discover-card tt">
+                        <i class="fab fa-tiktok"></i>
+                        <span>Tiktok Trends</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Recent Announcements -->
+            <div class="news-box">
+                <h2 class="section-title">Latest News</h2>
+                <div class="announcement-list">
+                    <div class="news-item">
+                        <span class="news-date">March 10, 2026</span>
+                        <h4>Yaps Music Awards 2026 Nominations Open!</h4>
+                        <p>Submit your favorite Ugandan artists for this year's biggest music celebration.</p>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">March 05, 2026</span>
+                        <h4>New Server Upgrade for Faster Downloads</h4>
+                        <p>We have optimized our system to ensure you get your MP3s in seconds.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+
+            <!-- Column 1: Brand & Contact -->
+            <div class="footer-column contact-info">
+                <div class="logo">YAPS<span>MUSIC</span></div>
+                <p class="footer-desc">The #1 destination for latest Ugandan music, albums, and entertainment news.</p>
+                <ul class="contact-details">
+                    <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                    <li><i class="fas fa-phone-alt"></i> +256 784729944</li>
+                    <li><i class="fas fa-envelope"></i> info@yapsmusic.com</li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Site Map (Navigation) -->
+            <div class="footer-column sitemap">
+                <h3>Site Map</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#afrobeat">Afrobeat Hits</a></li>
+                    <li><a href="#trending">Trending Charts</a></li>
+                    <li><a href="#family">The Family (Artists)</a></li>
+                    <li><a href="#news">Latest News</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Legal & Support -->
+            <div class="footer-column legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Copyright (DMCA)</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+<div class="audio-search-container">
+    <div class="search-wrapper">
+        <input type="text" placeholder="Search for songs or artists..." class="search-input">
+        <button id="record-btn" class="record-button" title="Search by voice or song">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+            </svg>
+        </button>
+      <button class="search-btn"><i class="fas fa-search"></i>Search</button>
+    </div>
+    <p id="status-text" class="status-message">Click the mic to record</p>
+</div>
+
+
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Yaps Music Uganda. Developed for the Culture.</p>
+                <div class="footer-socials-minimal">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

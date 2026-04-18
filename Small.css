@@ -1,0 +1,196 @@
+
+
+
+/* --- MOBILE OPTIMIZATION (Simu na Tablet) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Header & Navigation */
+    .row-main {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+    .nav-center {
+        order: 3; /* Inapeleka search bar chini ya logo kwenye simu */
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #desktopNav {
+        display: none; /* Inaficha menu ya desktop */
+    }
+
+    /* 2. Hero Section (Inabadilika kuwa Column badala ya Row) */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; /* Inapunguza ukubwa wa maandishi */
+    }
+
+    .hero-image {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    /* 3. Artist Scroll (Inahakikisha inasonga vizuri) */
+    .artist-scroll-container {
+        display: flex;
+        overflow-x: auto; /* Inaruhusu swipe ya pembeni */
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .artist-profile {
+        min-width: 130px; /* Inafanya picha ziwe ndogo kiasi */
+    }
+
+    /* 4. Trending List & Grid System */
+    .trending-item {
+        flex-direction: column; /* Vitu vinakaa juu-chini badala ya kushoto-kulia */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .stats {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 5. Discover & News Grid */
+    .discover-grid {
+        grid-template-columns: 1fr; /* Inabadilisha kutoka 2-columns kwenda 1-column */
+        gap: 20px;
+    }
+
+    /* 6. Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* --- Kurekebisha Side Drawer (Mobile Menu) --- */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Imejificha pembeni kwanza */
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    z-index: 2000;
+    padding: 20px;
+}
+
+/* Hii itatumika na JavaScript kuonyesha menu */
+.side-drawer.active {
+    left: 0;
+}
+
+
+
+.artist-profile {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Optional: Style for when no results are found */
+.no-results-msg {
+    color: #ff4d4d;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+
+/* The main container */
+.song-container {
+    display: grid;
+    /* This creates a grid where cards are at least 200px wide, 
+       but fits up to 4 per row on large screens */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: transparent;
+}
+
+/* Individual Song Card */
+.song-card {
+    background-color: rgba(255, 255, 255, 0.08); /* Transparent */
+    backdrop-filter: blur(12px);                /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for convenience */
+.song-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Image styling */
+.song-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps covers perfectly square */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Text and Buttons */
+.song-title {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #fff;
+}
+
+.song-artist {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.download-button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    background: #1db954; /* Spotify-style green, or change to transparent */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsive adjustment for very small screens */
+@media (max-width: 480px) {
+    .song-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
+        gap: 10px;
+        padding: 10px;
+    }
+}
+.song-container {
+    margin-top: 150px;
+}
+
+
+
+

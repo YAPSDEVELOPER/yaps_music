@@ -1,0 +1,2338 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    
+}
+
+body::before {
+  content: "";
+  background-image: url('assets/IMAGE/yapdev.png'); /* Replace with your image path */
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  opacity: 0.4; /* Adjusts image transparency only */
+  z-index: -1;   /* Puts the image behind your text */
+}
+
+
+
+:root { --primary: rgb(3, 3, 109); --bg: #000; --surface: #121212; --text: #fff; }
+
+
+.yaps-header { position: sticky; top: 0; z-index: 1000; background: var(--surface); }
+
+/* Row 1: Green Trending Bar */
+.row-trending { background: var(--primary); padding: 5px 0; }
+.scroll-container { display: flex; overflow-x: auto; gap: 25px; padding: 5px 20px; scrollbar-width: none; cursor: grab; }
+.scroll-container::-webkit-scrollbar { display: none; }
+.scroll-container a { color: black; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; text-transform: uppercase; }
+
+/* Row 2: Search & Logo */
+.row-main { display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; border-bottom: 1px solid #333; }
+.logo { font-size: 22px; font-weight: 900; color: var(--text); }
+.logo span { color: var(--primary); }
+.search-wrapper { position: relative; width: 100%; }
+.search-input { width: 100%; background: #222; border: none; padding: 10px 15px; border-radius: 5px; color: white; }
+
+/* Search Results Dropdown */
+.search-results { 
+    position: absolute; top: 45px; width: 100%; background: #282828; 
+    border-radius: 5px; display: none; flex-direction: column; box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.search-results.active { display: flex; }
+.result-item { padding: 10px; border-bottom: 1px solid #333; cursor: pointer; color: #ccc; }
+.result-item:hover { background: #333; color: white; }
+
+/* Mobile Drawer */
+.side-drawer { 
+    position: fixed; top: 0; left: -250px; width: 250px; height: 100%; 
+    background: #111; transition: 0.3s; padding: 20px; display: flex; flex-direction: column; gap: 20px;
+}
+.side-drawer.open { left: 0; }
+.side-drawer a { color: white; text-decoration: none; font-size: 18px; }
+
+/* Row 3: Nav */
+.row-services { display: flex; justify-content: center; gap: 40px; padding: 12px; background: var(--surface); }
+.row-services a { color: #888; text-decoration: none; transition: 0.2s; }
+.row-services a.active, .row-services a:hover { color: var(--primary); }
+
+@media (max-width: 768px) { .row-services { display: none; } }
+
+
+
+/* Music Section */
+.music-section {
+    padding: 40px 5%;
+}
+
+.music-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* Hamburger Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Responsive Design (Simu) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+
+    .navbar.active {
+        right: 0; /* Slide in menu */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 40px;
+        gap: 20px;
+    }
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-weight: bold; letter-spacing: 2px; }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { color: var(--text-gray); text-decoration: none; font-size: 0.9rem; }
+
+
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #ffffff;
+    --accent-color: #ffffff;
+}
+
+/* Muundo wa Header Yote */
+.yaps-header {
+    position: fixed; /* Inaifanya header ibaki juu unaposogeza ukurasa */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* Athari ya Uwazi (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.05); /* Uwazi kidogo sana */
+    backdrop-filter: blur(15px); /* Inatia ukungu maudhui yaliyo nyuma ya header */
+    -webkit-backdrop-filter: blur(15px); /* Kwa ajili ya Safari */
+    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Mstari mwembamba wa chini */
+    color: #ffffff;
+}
+
+/* Kufanya sehemu zote za ndani ziwe wazi */
+.row-trending, .row-main, .row-services {
+    background: transparent !important;
+    padding: 10px 20px;
+}
+
+/* Sehemu ya kutafuta (Search Input) */
+.search-wrapper input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 8px 20px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.profile-icon {
+    width: 40px; /* Unaweza kurekebisha saizi hapa */
+    height: 40px;
+    border-radius: 50%; /* Inatengeneza duara kamili */
+    overflow: hidden; /* Inakata sehemu za picha zinazozidi duara */
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Mstari mwembamba wa uwazi */
+    transition: 0.3s;
+}
+
+.profile-icon:hover {
+    border-color: #ff0055; /* Inabadilika rangi ukigusa (hover) */
+    transform: scale(1.05); /* Inajiongeza saizi kidogo */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Inahakikisha picha haijivuti vibaya */
+}
+
+
+.search-wrapper input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ff0055; /* Rangi ya kung'aa unapobonyeza */
+}
+
+/* Viunganishi vya Navigation */
+.row-services a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.row-services a:hover, .row-services a.active {
+    opacity: 1;
+    color: #ff0055;
+}
+
+/* Vipengele vya Trending */
+.scroll-container a {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.scroll-container a:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+/* 4. Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03); /* Very light transparent white */
+    backdrop-filter: blur(15px); /* This blurs the image behind the card */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #38bdf8;
+}
+
+/* Button */
+.btn {
+    padding: 15px 35px;
+    background: #38bdf8;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.hero {
+    /* Weka URL ya picha yako hapa */
+    background-image: url('Assets/IMAGE/yapdev.png');
+    /* Inafanya picha ijae vizuri bila kujirudia */
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Inahakikisha sehemu hiyo ina urefu wa kutosha */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white; /* Rangi ya maandishi iwe nyeupe ili ionekane */
+}
+
+/* Kama unataka picha isisogee unaposcroll (Parallax effect) */
+.hero {
+    background-attachment: fixed;
+}
+
+
+#main-title {
+    font-size: 80px;
+    font-weight: 900;
+    margin: 0;
+    font-style: italic;
+}
+
+#sub-title {
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: #888;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.description {
+    max-width: 400px;
+    line-height: 1.6;
+    color: #ccc;
+    height: 3em; /* Prevents layout jump when text changes */
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0 5%;
+}
+
+.album-card {
+    background: #001f3f; /* Dark Blue Card */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.album-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff0000;
+    background: #002b55;
+}
+
+.album-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1; /* Keeps covers square */
+}
+
+.album-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Play Overlay */
+.album-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 31, 63, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.album-card:hover .album-overlay {
+    opacity: 1;
+}
+
+.album-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.album-info .card-title {
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-info .card-artist {
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+/* Responsive Grid for Tablets and Phones */
+@media (max-width: 1100px) {
+    .album-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .album-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+
+
+.trending-section {
+    background-color: #001220; /* Darker Navy Blue */
+    padding: 50px 0;
+
+}
+
+
+.trending-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 5%;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #001f3f; /* Dark Blue Card */
+    padding: 15px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.trending-item:hover {
+    background: #002b55;
+    transform: translateX(10px);
+    border-color: #ff0000;
+}
+
+.rank {
+    font-size: 24px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.2);
+    width: 40px;
+}
+
+.trending-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.trending-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.details .card-title {
+    font-size: 18px;
+    margin-bottom: 2px;
+    color: #fff;
+}
+
+.details .card-artist {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.play-count {
+    font-size: 13px;
+    color: #cbd5e0;
+    font-weight: 500;
+}
+
+.play-count i {
+    color: #ff0000;
+    margin-right: 5px;
+}
+
+/* Play button adjustment for list */
+.trending-item .play-btn-trigger {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .stats .play-count { display: none; }
+    .rank { display: none; }
+    .trending-item { padding: 10px 15px; }
+}
+
+.family-section {
+    background-color: #000b1a; /* Very Dark Blue */
+    padding: 60px 0;
+    border-top: 1px solid #001f3f;
+}
+
+.section-header span {
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: normal;
+}
+
+.scroll-instructions {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 0 5%;
+}
+
+/* Horizontal Scroll Container */
+.artist-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 5%;
+    /* Custom Scrollbar for Chrome/Safari */
+    scrollbar-width: thin;
+    scrollbar-color: #ff0000 #001f3f;
+}
+
+.artist-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.artist-scroll-container::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+/* Artist Profile Card */
+.artist-profile {
+    flex: 0 0 auto; /* Prevents cards from shrinking */
+    width: 140px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.profile-img-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid #003366; /* Dark Blue Border */
+    transition: 0.3s;
+}
+
+.artist-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.artist-profile:hover .profile-img-wrapper {
+    border-color: #ff0000; /* Changes to red on hover */
+    transform: scale(1.1);
+}
+
+.artist-name {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.artist-status {
+    display: block;
+    color: #b3b3b3;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* Modal Background */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.modal-content {
+    background-color: #001f3f; /* Dark Blue */
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #ff0000;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    position: relative;
+    color: white;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.close-modal:hover { color: #ff0000; }
+
+.modal-header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+#modal-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    object-fit: cover;
+}
+
+.bio-text h3, .modal-top-tracks h3 {
+    color: #ff0000;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.bio-text p {
+    color: #cbd5e0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal-top-tracks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-top-tracks li {
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+
+/* Modal Background */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.modal-content {
+    background-color: #001f3f; /* Dark Blue */
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #ff0000;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    position: relative;
+    color: white;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.close-modal:hover { color: #ff0000; }
+
+.modal-header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+#modal-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    object-fit: cover;
+}
+
+.bio-text h3, .modal-top-tracks h3 {
+    color: #ff0000;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.bio-text p {
+    color: #cbd5e0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal-top-tracks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-top-tracks li {
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+/* Auth Box Styles */
+.auth-box {
+    max-width: 400px;
+    background: #000b1a; /* Deep Navy */
+    border-radius: 20px;
+    padding: 40px 30px;
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 30px;
+    background: #001f3f;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #888;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background: #ff0000;
+    color: white;
+}
+
+.auth-form {
+    display: none; /* Hidden by default */
+}
+
+.auth-form.active {
+    display: block; /* Shown when active */
+}
+
+.auth-form h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff0000;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background: #001f3f;
+    border: 1px solid #003366;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ff0000;
+}
+
+.auth-submit {
+    width: 100%;
+    padding: 15px;
+    background: #ff0000;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-submit:hover {
+    background: #cc0000;
+    transform: scale(1.02);
+}
+
+.forgot-pass {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+
+.main-footer {
+    background-color: #000b1a; /* Dark Blue Deep */
+    color: #fff;
+    padding: 80px 0 0;
+    border-top: 2px solid #ff0000; /* Red line at top */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* First column wider */
+    gap: 40px;
+    padding: 0 5% 60px;
+}
+
+.footer-column h3 {
+    color: #ff0000;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-desc {
+    color: #b3b3b3;
+    line-height: 1.6;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    margin-bottom: 12px;
+    color: #cbd5e0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details i {
+    color: #ff0000;
+    width: 20px;
+}
+
+/* Sitemap & Legal Links */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px; /* Hover effect */
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    background: #000;
+    padding: 25px 5%;
+    text-align: center;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 13px;
+}
+
+.footer-socials-minimal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials-minimal a {
+    color: #666;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.footer-socials-minimal a:hover {
+    color: #ff0000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack on mobile */
+        text-align: center;
+    }
+    .contact-details li {
+        justify-content: center;
+    }
+    .footer-bottom .container {
+        justify-content: center;
+    }
+}
+
+
+.login-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #111;
+    margin: 10% auto;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px; top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+}
+
+.auth-submit {
+    width: 100%;
+    padding: 10px;
+    background: #ff0055; /* Use your brand color */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.tab-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #888;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tab-btn.active {
+    color: #ff0055;
+    border-bottom: 2px solid #ff0055;
+    font-weight: bold;
+}
+
+
+
+.box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Transparent look */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px; /* Rounded corners */
+    padding: 5px 15px;
+    max-width: 400px;
+    transition: 0.3s;
+}
+
+.box:focus-within {
+    border-color: #ff0055; /* Inabadilika rangi ukiclick */
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
+}
+
+.search-input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    flex: 1;
+    font-size: 14px;
+}
+
+.search-button {
+    background: #ff0055; /* Rangi ya Yaps Music */
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    background: #e6004c;
+    transform: scale(1.05);
+}
+
+
+
+/* Glassy Transparent Family Section */
+.family-section {
+    padding: 60px 20px;
+    margin: 20px; /* Adds space around the glass card */
+    border-radius: 24px; /* Rounded corners for a modern look */
+    
+    /* Transparent Glass Effect */
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Subtle Border to define the section */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure the scroll container remains clean */
+.artist-scroll-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 20px 10px;
+    scrollbar-width: none; /* Hides scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
+}
+
+.artist-scroll-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for Chrome/Safari/Opera */
+}
+
+/* Individual Artist Profile hover effect */
+.artist-profile {
+    min-width: 110px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.artist-profile:hover {
+    transform: scale(1.1); /* Pops out when hovered */
+}
+
+
+
+
+/* General Modal & Overlay Styling */
+.modal, .search-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px); /* Modern blur effect */
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Modal Box (Login/Register) */
+.modal-content {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #333;
+    position: relative;
+    text-align: center;
+}
+
+
+
+/* Close Buttons */
+.close-modal, .close-search {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #888;
+    cursor: pointer;
+}
+
+.close-modal:hover, .close-search:hover { color: #ff0055; }
+
+/* Tab Styling */
+.tab-box { display: flex; margin-bottom: 20px; border-bottom: 1px solid #333; }
+.tab-btn { background: none; border: none; color: #888; padding: 10px; cursor: pointer; flex: 1; }
+.tab-btn.active { color: #ff0055; border-bottom: 2px solid #ff0055; font-weight: bold; }
+
+/* Inputs inside Login */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #252525;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff0055;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+
+
+
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    border-top: 1px solid #333;
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.player-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.current-track { display: flex; align-items: center; gap: 15px; width: 30%; }
+.current-track img { width: 50px; height: 50px; border-radius: 5px; }
+.track-details h4 { font-size: 14px; margin-bottom: 3px; }
+.track-details p { font-size: 12px; color: #888; }
+
+.player-controls { width: 40%; text-align: center; }
+.control-btns { display: flex; justify-content: center; gap: 20px; margin-bottom: 5px; }
+.control-btns button { background: none; border: none; color: white; font-size: 18px; cursor: pointer; }
+.play-pause { background: white !important; color: black !important; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+.progress-container { display: flex; align-items: center; gap: 10px; color: #888; font-size: 12px; }
+#progress-bar { flex: 1; accent-color: orange; cursor: pointer; }
+
+.volume-box { width: 20%; display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
+#volume-slider { width: 80px; accent-color: orange; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.music-player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #181818;
+  border-top: 1px solid #282828;
+  color: white;
+  padding: 0 16px;
+  z-index: 2000;
+}
+
+.player-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 100vw;
+}
+
+/* Left: Song Details */
+.now-playing { display: flex; align-items: center; width: 30%; gap: 15px; }
+.album-art { width: 56px; height: 56px; border-radius: 4px; }
+.track-info { display: flex; flex-direction: column; }
+.track-name { font-size: 14px; font-weight: 600; }
+.artist-name { font-size: 11px; color: #b3b3b3; }
+
+/* Center: Controls & Progress */
+.player-controls { width: 40%; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.control-buttons { display: flex; gap: 20px; align-items: center; }
+.main-play { 
+    background: white; color: black; border: none; 
+    width: 32px; height: 32px; border-radius: 50%; font-size: 18px; cursor: pointer;
+}
+.progress-container { display: flex; width: 100%; align-items: center; gap: 10px; font-size: 11px; color: #b3b3b3; }
+
+/* Right: Volume */
+.utility-controls { width: 30%; display: flex; justify-content: flex-end; align-items: center; gap: 15px; }
+.volume-wrapper { display: flex; align-items: center; gap: 8px; width: 100px; }
+
+/* Slider Styling */
+input[type="range"] {
+  accent-color: #1db954; /* YAPS Green */
+  height: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.album-card {
+    /* Semi-transparent background (White with 20% opacity) */
+    background: rgba(255, 255, 255, 0.2); 
+    
+    /* The "Blur" effect that makes it look like frosted glass */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    
+    /* Optional: Adding a thin border and shadow for better visibility */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.album-info h3, .album-info p {
+    color: white; /* Ensures text is visible against the transparency */
+}
+
+
+/* Footer Styles */
+.main-footer {
+    background-color: rgb(7, 7, 26);
+    padding: 50px 5% 20px;
+    border-top: 1px solid #26103b;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    position: relative;
+    color: white; /* Default color */
+    font-size: 24px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Tooltip (Displaying the word title) */
+.social-icon::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    background: #ff0000;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.social-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -35px;
+}
+
+/* Original Brand Colors on Hover */
+.social-icon.facebook:hover { color: #1877F2; }
+.social-icon.twitter:hover { color: #1DA1F2; }
+.social-icon.instagram:hover { color: #E4405F; }
+.social-icon.youtube:hover { color: #FF0000; }
+
+.copyright {
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+
+
+/* 1. Make the main section background transparent */
+.trending-section {
+    background: transparent;
+    padding: 40px 0;
+}
+
+/* 2. Style each trending item with "Glassmorphism" */
+.trending-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    
+    /* Transparent White Background */
+    background: rgba(255, 255, 255, 0.05); 
+    
+    /* Frosted Glass Blur effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Thin border to define the edges */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    transition: all 0.3s ease;
+}
+
+/* 3. Hover effect for interaction */
+.trending-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(5px); /* Slight slide to the right */
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 4. Layout & Text visibility */
+.trending-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rank {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5); /* Faded rank number */
+    margin-right: 10px;
+}
+
+.card-title {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.card-artist, .play-count {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.card-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* 5. Style the Play Button */
+.play-btn-trigger {
+    background: rgb(29, 29, 53); /* Spotify green or your brand color */
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* 1. Set the background for the entire section */
+.discover-news {
+    background: transparent;
+    padding: 60px 0;
+}
+
+/* 2. Create the glass effect for the two main containers */
+.discover-box, .news-box {
+    padding: 30px;
+    border-radius: 20px;
+    
+    /* Transparency: White at 5% opacity */
+    background: rgba(255, 255, 255, 0.05);
+    
+    /* Frosted glass blur */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Subtle border for definition */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    height: 100%; /* Ensures they are the same height in the grid */
+}
+
+/* 3. Style the Social Cards inside the discover box */
+.discover-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.08); /* Transparent buttons */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease;
+}
+
+.discover-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* 4. Individual News Item Styling */
+.news-item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 5. Text Colors for Visibility */
+.section-title, .news-item h4 {
+    color: #ffffff;
+}
+
+.discover-text, .news-item p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+/* 1. Main Footer Glass Container */
+.main-footer {
+    background: rgba(0, 0, 0, 0.4); /* Darker transparency for better text contrast */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 0 0 0; /* Space at top, 0 at bottom for footer-bottom */
+    color: #ffffff;
+}
+
+/* 2. Column Titles */
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: blue; /* Highlight color for headers */
+}
+
+/* 3. Links and Lists */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a, .footer-desc, .contact-details li {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px; /* Subtle movement on hover */
+}
+
+/* 4. Footer Bottom (Copyright Bar) */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3); /* Slightly darker strip at the bottom */
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* 5. Social Icons in Footer */
+.footer-socials-minimal a {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-socials-minimal a:hover {
+    color: blue;
+}
+
+/* Logo styling inside footer */
+.contact-info .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.contact-info .logo span {
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+/* Container for the specific section */
+.hero-section {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.hero-glass-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 65px;
+    color: #fff;
+}
+
+/* Left Card Styling */
+.artist-card-box {
+    border-radius: 20px;
+    padding-bottom: 25px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.artist-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.main-artist-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.artist-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.6);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.song-name {
+    margin: 20px 0;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* Button Animations */
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-play {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-download {
+    
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.arrow-bounce {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+/* Right Side Column */
+.status-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.status-item {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.music-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.music-bars span {
+    width: 4px;
+    height: 100%;
+    background: #4a00e0;
+    border-radius: 2px;
+    animation: pulse 0.5s infinite alternate;
+}
+
+.background-icon {
+    font-size: 60px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.05;
+}
+
+@keyframes pulse {
+    from { height: 20%; }
+    to { height: 100%; }
+}
+
+/* Footer Section */
+.hero-contact-footer {
+    grid-column: span 2;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 13px;
+    color: #888;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.hero-contact-footer a { color: #fff; text-decoration: none; font-weight: bold; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-glass-container { grid-template-columns: 1fr; }
+    .hero-contact-footer { grid-column: span 1; }
+}
+.ticker {
+display: inline-block;
+animation: scrollLeft 10s linear infinite;
+}
+@keyframes scrollLeft {
+    0%{
+    transform: translateX(0);
+}
+100%{
+    transform: translateX(-100%); 
+} 
+}
+
+
+
+/* The container that holds the row */
+.song-container {
+    display: flex;
+    flex-direction: row; /* Keep them in a line */
+    flex-wrap: nowrap;    /* Prevents them from moving to a new line */
+    gap: 10px;           /* Space between the squares */
+    padding: 10px;
+    width: 100%;
+    overflow-x: auto;    /* Adds a scroll if the screen is too narrow */
+    box-sizing: border-box;
+}
+
+/* The Square Box */
+.song-card {
+    flex: 0 0 calc(25% - 10px); /* Forces exactly 4 boxes per row */
+    aspect-ratio: 1 / 1;        /* Makes it a perfect square */
+    
+    /* Transparency */
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
+
+/* Making the image fit inside the square */
+.song-card img {
+    width: 50%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Shrinking text to fit small squares */
+.song-title {
+    font-size: 0.8rem;
+    margin: 2px 0;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-artist {
+    font-size: 0.6rem;
+    opacity: 0.8;
+}
+
+/* Hide bulky elements to keep the square shape */
+audio, .download-button {
+    display: none; 
+}
+
+
+
+
+/* Container to hold the cards in a row */
+.song-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;            /* Space between cards */
+    padding: 20px;
+    overflow-x: auto;     /* Allows horizontal scrolling if cards exceed screen width */
+    background: transparent; 
+}
+
+/* Individual Song Card */
+.song-card {
+    flex: 0 0 250px;      /* Prevents cards from shrinking; sets width to 250px */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px);               /* Optional: adds a glass-like blur effect */
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for definition */
+    color: white;         /* Text color */
+    text-align: center;
+}
+
+/* Ensure images fit well */
+.song-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling the audio player to match */
+audio {
+    width: 100%;
+    margin: 10px 0;
+    height: 30px;
+}/* Container to hold the cards in a row */
+.song-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;            /* Space between cards */
+    padding: 20px;
+    overflow-x: auto;     /* Allows horizontal scrolling if cards exceed screen width */
+    background: transparent; 
+}
+
+/* Individual Song Card */
+.song-card {
+    flex: 0 0 250px;      /* Prevents cards from shrinking; sets width to 250px */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px);               /* Optional: adds a glass-like blur effect */
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for definition */
+    color: white;         /* Text color */
+    text-align: center;
+}
+
+/* Ensure images fit well */
+.song-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling the audio player to match */
+audio {
+    width: 100%;
+    margin: 10px 0;
+    height: 30px;
+}
+
+
+
+.song-card {
+    /* This forces height to equal width */
+    aspect-ratio: 1 / 1; 
+    
+    /* Layout styling */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spaced out elements inside the square */
+    align-items: center;
+    
+    /* Transparency & Glass Effect */
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 15px;
+    overflow: hidden; /* Keeps everything inside the square */
+}
+
+.song-card img {
+    width: 60%;         /* Smaller image to leave room for text */
+    aspect-ratio: 1 / 1; /* Keep the image itself square too */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.song-info, .song-infor {
+    width: 100%;
+    text-align: center;
+}
+
+
+.mage-box {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+.img-box {
+    width: 70%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+
+.audio-search-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 0 5px;
+    width: 100%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    outline: none;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.record-button {
+    background: transparent;
+    border: none;
+    color: #efefef;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.record-button:hover {
+    color: orangered;
+    transform: scale(1.1);
+}
+
+.record-button.recording {
+    color: orangered;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.status-message {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+
+
+/* Base Drawer State */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px; /* Adjust width as needed */
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.98); /* Transparent dark theme */
+    backdrop-filter: blur(10px);
+    z-index: 2000; /* Ensure it's above everything */
+    
+    /* This hides the drawer off-screen */
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* When this class is added via JS, the drawer slides in */
+.side-drawer.active {
+    transform: translateX(0);
+}
+
+/* Optional: Add an overlay to dim the background when menu is open */
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    display: none; /* Hidden by default */
+}
+
+.drawer-overlay.active {
+    display: block;
+}
+
+
+
+
+
+
+
+/* Public Search Styling */
+.public-search-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.search-bar:focus-within {
+    border-color: orange; /* Vibrant accent color */
+    box-shadow: 0 0 15px orangered;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    margin-left: 15px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    background: orange;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Quick Tags */
+.quick-tags {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.quick-tags a {
+    color: #00d2ff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Live Stats Styling */
+.public-stats {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-left: 3px solid #00ff88 !important;
+}
+
+.live-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #00ff88;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Ticker Animation */
+.ticker {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Make sure the image-box doesn't look flat */
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+
+span {
+    display: inline-block;
+    color: rgb(248, 164, 9);
+    font-weight: 100px;
+}
+.music {
+    color: orange;
+    font-weight: bold;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+/* 4. Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03); /* Very light transparent white */
+    backdrop-filter: blur(15px); /* This blurs the image behind the card */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #38bdf8;
+}
+
+/* Button */
+.btn {
+    padding: 15px 35px;
+    background: #38bdf8;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+.hamburger-btn{
+background: rgba(255, 255, 255, 0.03); /* Very light transparent white */
+color: white;
+width: 30px;
+font-weight: bold;
+font-size: 20px;
+cursor: pointer;
+}
+.hamburger-btn:hover{
+    background: gray;
+    color: black;
+    font-size: 20px;
+}
+.close-btn{   
+background: rgba(255, 255, 255, 0.03); /* Very light transparent white */
+color: white;
+width: 30px;
+font-weight: bold;
+font-size: 20px;
+    
+}
+.log{
+    font-size: 15px;
+    font-weight: 500px;
+
+}

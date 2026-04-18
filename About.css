@@ -1,0 +1,152 @@
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+
+.btn-primary:hover, .btn-outline:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .hero-btns {
+        justify-content: center;
+    }
+}
+
+
+
+/* 2. The Black Transparent Overlay Wrapper */
+.main-wrapper {
+    /* Black color with 80% transparency */
+    background-color: rgba(0, 0, 0, 0.8); 
+    min-height: 100vh;
+    color: #ffffff;
+    width: 100%;
+}
+
+/* 3. The "Frosted Glass" Card Style */
+.glass-card {
+    /* Lighter transparent black for cards */
+    background: rgba(255, 255, 255, 0.05); 
+    
+    /* The magic "Frosted" effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Section styling for spacing */
+section {
+    padding: 80px 10%;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 2. The Black Transparent Overlay */
+.yaps-wrapper {
+    background-color: rgba(0, 0, 0, 0.85); /* Black with 85% opacity */
+    min-height: 100vh;
+    color: #ffffff;
+    width: 100%;
+}
+
+/* 3. Section Spacing & Layout */
+section {
+    padding: 80px 10%;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+/* 4. Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03); /* Very light transparent white */
+    backdrop-filter: blur(15px); /* This blurs the image behind the card */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #38bdf8;
+}
+
+/* Button */
+.btn {
+    padding: 15px 35px;
+    background: #38bdf8;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn-primary {
+    background: #38bdf8;
+    color: #000;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
