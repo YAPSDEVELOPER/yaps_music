@@ -1,23 +1,22 @@
-
-
-
 /* --- MOBILE OPTIMIZATION (Simu na Tablet) --- */
 @media (max-width: 768px) {
-    
+
     /* 1. Header & Navigation */
     .row-main {
         flex-wrap: wrap;
         padding: 10px;
     }
-    
+
     .nav-center {
-        order: 3; /* Inapeleka search bar chini ya logo kwenye simu */
+        order: 3;
+        /* Inapeleka search bar chini ya logo kwenye simu */
         width: 100%;
         margin-top: 10px;
     }
 
     #desktopNav {
-        display: none; /* Inaficha menu ya desktop */
+        display: none;
+        /* Inaficha menu ya desktop */
     }
 
     /* 2. Hero Section (Inabadilika kuwa Column badala ya Row) */
@@ -28,7 +27,8 @@
     }
 
     .hero-text h1 {
-        font-size: 2.5rem; /* Inapunguza ukubwa wa maandishi */
+        font-size: 2.5rem;
+        /* Inapunguza ukubwa wa maandishi */
     }
 
     .hero-image {
@@ -39,18 +39,21 @@
     /* 3. Artist Scroll (Inahakikisha inasonga vizuri) */
     .artist-scroll-container {
         display: flex;
-        overflow-x: auto; /* Inaruhusu swipe ya pembeni */
+        overflow-x: auto;
+        /* Inaruhusu swipe ya pembeni */
         gap: 15px;
         padding-bottom: 15px;
     }
 
     .artist-profile {
-        min-width: 130px; /* Inafanya picha ziwe ndogo kiasi */
+        min-width: 130px;
+        /* Inafanya picha ziwe ndogo kiasi */
     }
 
     /* 4. Trending List & Grid System */
     .trending-item {
-        flex-direction: column; /* Vitu vinakaa juu-chini badala ya kushoto-kulia */
+        flex-direction: column;
+        /* Vitu vinakaa juu-chini badala ya kushoto-kulia */
         align-items: flex-start;
         gap: 10px;
     }
@@ -64,7 +67,8 @@
 
     /* 5. Discover & News Grid */
     .discover-grid {
-        grid-template-columns: 1fr; /* Inabadilisha kutoka 2-columns kwenda 1-column */
+        grid-template-columns: 1fr;
+        /* Inabadilisha kutoka 2-columns kwenda 1-column */
         gap: 20px;
     }
 
@@ -84,7 +88,8 @@
 .side-drawer {
     position: fixed;
     top: 0;
-    left: -250px; /* Imejificha pembeni kwanza */
+    left: -250px;
+    /* Imejificha pembeni kwanza */
     width: 250px;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
@@ -129,8 +134,10 @@
 
 /* Individual Song Card */
 .song-card {
-    background-color: rgba(255, 255, 255, 0.08); /* Transparent */
-    backdrop-filter: blur(12px);                /* Glass effect */
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Transparent */
+    backdrop-filter: blur(12px);
+    /* Glass effect */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 15px;
@@ -149,7 +156,8 @@
 /* Image styling */
 .song-card img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Keeps covers perfectly square */
+    aspect-ratio: 1 / 1;
+    /* Keeps covers perfectly square */
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -173,7 +181,8 @@
     padding: 8px;
     border-radius: 20px;
     border: none;
-    background: #1db954; /* Spotify-style green, or change to transparent */
+    background: #1db954;
+    /* Spotify-style green, or change to transparent */
     color: white;
     cursor: pointer;
     font-weight: bold;
@@ -182,15 +191,13 @@
 /* Responsive adjustment for very small screens */
 @media (max-width: 480px) {
     .song-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row on mobile */
         gap: 10px;
         padding: 10px;
     }
 }
+
 .song-container {
     margin-top: 150px;
 }
-
-
-
-

@@ -21,14 +21,14 @@ const progressFill = document.querySelector('.progress-fill');
 document.addEventListener('click', (e) => {
     // Check if the clicked element is a play button or inside one
     const btn = e.target.closest('.play-btn-trigger');
-    
+
     if (btn) {
         // Get the audio source link
         const songSrc = btn.getAttribute('data-src');
-        
+
         // Find the parent container (can be Trending Item, Album Card, or Music Card)
         const parent = btn.closest('.trending-item') || btn.closest('.album-card') || btn.closest('.music-card') || btn.closest('.hero-content');
-        
+
         // Extract data from the clicked card
         const title = parent.querySelector('.card-title')?.innerText || "Unknown Title";
         const artist = parent.querySelector('.card-artist')?.innerText || "Unknown Artist";
@@ -38,7 +38,7 @@ document.addEventListener('click', (e) => {
         footerTrackName.innerText = title;
         footerArtistName.innerText = artist;
         footerAlbumArt.src = img;
-        
+
         // Set the song source and Play
         mainAudio.src = songSrc;
         mainAudio.play();
@@ -88,7 +88,7 @@ document.querySelectorAll('.artist-profile').forEach(profile => {
         document.getElementById('modal-name').innerText = name;
         document.getElementById('modal-img').src = img;
         document.getElementById('modal-status').innerText = status;
-        
+
         // Example: Change bio based on name (Optional logic)
         document.getElementById('modal-description').innerText = `${name} is one of Uganda's most influential artists in 2026.`;
 
@@ -239,7 +239,7 @@ loginTab.onclick = () => {
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. Parallax Effect: Image moves slightly with mouse movement
     const heroImage = document.querySelector('.image-container img');
     const heroSection = document.querySelector('.hero');
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Interactive "Hits" Cards
     const hitCards = document.querySelectorAll('.hit-card');
-    
+
     hitCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.cursor = 'pointer';
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = 'translateY(0) scale(1)';
             card.style.boxShadow = 'none';
         });
-        
+
         // Simple click feedback
         card.addEventListener('click', () => {
             const genre = card.innerText;
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const textContent = document.querySelector('.text-content');
     textContent.style.opacity = '0';
     textContent.style.transform = 'translateX(-30px)';
-    
+
     setTimeout(() => {
         textContent.style.transition = 'all 1s ease-out';
         textContent.style.opacity = '1';
@@ -364,7 +364,7 @@ const playerArtist = document.getElementById('player-artist');
 
 // Function to Play Selected Song
 document.querySelectorAll('.play-btn-trigger').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         const songSrc = this.getAttribute('data-src');
         const card = this.closest('.album-card') || this.closest('.trending-item');
         const title = card.querySelector('.card-title').innerText;
@@ -418,7 +418,7 @@ const sideDrawer = document.getElementById('sideDrawer');
 searchInput.addEventListener('input', (e) => {
     const value = e.target.value.toLowerCase();
     resultsBox.innerHTML = '';
-    
+
     if (value.length > 0) {
         const filtered = mockDatabase.filter(item => item.toLowerCase().includes(value));
         if (filtered.length > 0) {
@@ -505,7 +505,7 @@ const descriptionElement = document.getElementById("changing-description");
 function changeText() {
     // Increment index and loop back to 0 if at the end
     currentIndex = (currentIndex + 1) % descriptions.length;
-    
+
     // Update the text content
     descriptionElement.textContent = descriptions[currentIndex];
 }
@@ -525,12 +525,12 @@ setInterval(() => {
         bar.style.height = Math.floor(Math.random() * 100) + "%";
     });
 }, 200);
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('mainSearch');
-    
+
     // Check if the search input actually exists to avoid errors
     if (searchInput) {
-        searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', function () {
             const query = this.value.toLowerCase().trim();
             const songCards = document.querySelectorAll('.song-card');
 
@@ -616,7 +616,7 @@ recordBtn.addEventListener('click', async () => {
         mediaRecorder.onstop = () => {
             const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
             console.log("Audio captured, ready to search:", audioBlob);
-            
+
             // Logic to send audioBlob to your search API goes here
             setTimeout(() => {
                 btnText.innerText = "Record to Search";
@@ -626,7 +626,7 @@ recordBtn.addEventListener('click', async () => {
         mediaRecorder.start();
         recordBtn.classList.add('is-recording');
         btnText.innerText = "Listening...";
-        
+
     } catch (err) {
         alert("Microphone access is required to search by song.");
         console.error(err);
@@ -637,7 +637,7 @@ async function loadArtists() {
     try {
         const response = await fetch('fetch_data.php');
         const artists = await response.json();
-        
+
         // Find your horizontal scroll container
         const container = document.querySelector('.artist-scroll-container');
         container.innerHTML = ''; // Clear the "placeholder" Eddy Kenzos
@@ -670,7 +670,7 @@ document.addEventListener('DOMContentLoaded', loadArtists);
 document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('main-player');
     const playBtn = document.querySelector('.btn-play');
-    
+
     // Select the icon inside the button to change it
     const playIcon = playBtn.querySelector('i');
 
@@ -741,11 +741,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Simple visual feedback
             const btn = contactForm.querySelector('.btn');
             const originalText = btn.innerText;
-            
+
             btn.innerText = 'Sending...';
             btn.style.opacity = '0.7';
 

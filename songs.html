@@ -1,0 +1,2402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Uploading</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="small.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <form action="process.php" method="POST">
+      <script src="script.js" defer></script>
+      <script src="small.js" defer></script>
+</head>
+
+<body>
+
+
+
+   <header class="yaps-header">
+      <!-- Row 1: Trending Horizontal Scroll -->
+      <div class="row-trending">
+         <div class="scroll-container" id="trendingScroll">
+            <a href="">🔥 News</a>
+            <a href="upload.html">🎤 Artists</a>
+            <a href="">🎧 Audio</a>
+            <a href="upload.html">📈 Hot 100</a>
+            <a href="#">💿 New Releases</a>
+            <a href="#">🎙️ Podcasts</a>
+            <a href="#">🌍 Global Charts</a>
+            <a href="#">My Library</a>
+            <a href="#">Premium</a>
+            <a href="#">Support</a>
+            <a href="#">Create Music</a>
+
+         </div>
+      </div>
+
+      <!-- Row 2: Main Branding & Search -->
+      <div class="row-main">
+         <div class="nav-left">
+            <button class="hamburger-btn" id="menuToggle">☰</button>
+            <div class="log">YAPS <span class="music">MUSIC</span></div>
+         </div>
+
+
+         <div class="audio-search-container">
+            <div class="search-wrapper">
+               <input type="text" placeholder="Search for songs or artists..." class="search-input">
+               <button id="record-btn" class="record-button" title="Search by voice or song">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                     <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+                     <path
+                        d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
+                  </svg>
+               </button>
+               <button class="search-btn"><i class="fas fa-search"></i>Search</button>
+            </div>
+            <p id="status-text" class="status-message">Click the mic to record</p>
+         </div>
+
+
+         <!-- Row 3: Primary Links (Desktop) -->
+         <nav class="row-services" id="desktopNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="songs.html">Music</a>
+            <a href="#">Videos</a>
+            <a href="#">Live</a>
+            <a href="about us.html">About</a>
+         </nav>
+
+         <!-- Mobile Side Drawer -->
+         <div class="side-drawer" id="sideDrawer">
+            <button class="close-btn" id="closeMenu">✕</button>
+            <a href="index.html">Home</a>
+            <a href="songs.html">Music</a>
+            <a href="#">Videos</a>
+            <a href="about us.html">Abuot</a>
+            <a href="#">Radio</a>
+            <a href="#">My Library</a>
+            <a href="#">Premium</a>
+            <a href="#">Podcasts</a>
+            <a href="#">My Library</a>
+            <a href="#">Premium</a>
+            <a href="#">Support</a>
+            <a href="#">Create Music</a>
+
+         </div>
+
+
+         <div class="nav-right">
+
+            <!-- Personal Image Profile -->
+            <div class="profile-icon" id="profileBtn">
+               <img src="Assets/yapdev.png" alt="Profile" class="profile-img">
+            </div>
+         </div>
+   </header>
+
+   <section class="hero-section">
+      <div class="hero-glass-container">
+         <div class="public-search-wrapper">
+
+            <div class="audio-search-container">
+               <div class="search-wrapper">
+                  <input type="text" placeholder="Search for songs or artists..." class="search-input">
+                  <button id="record-btn" class="record-button" title="Search by voice or song">
+                     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+                        <path
+                           d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
+                     </svg>
+                  </button>
+                  <button class="search-btn"><i class="fas fa-search"></i>Search</button>
+               </div>
+               <p id="status-text" class="status-message">Click the mic to record</p>
+            </div>
+
+            <div class="quick-tags">
+               <span>Trending:</span>
+               <a href="#">#Afrobeat</a> <a href="#">#Amapiano</a> <a href="#">#Vinka</a>
+            </div>
+         </div>
+
+         <div class="artist-card-box">
+            <div class="image-box">
+               <img src="Assets/Hero image.png" alt="Hero Image" class="img-box">
+               <span class="badge">Vinka</span>
+            </div>
+
+            <h1 class="song-name">Lalala</h1>
+
+            <div class="action-buttons">
+               <button class="btn-play"><i class="fas fa-play"></i> PLAY</button>
+               <a href="Assets/Lalala - Vinka (erycom)_1760199311.mp3" download class="btn-download">
+                  <i class="fas fa-arrow-down arrow-bounce"></i> Download
+               </a>
+            </div>
+         </div>
+
+         <div class="status-stack">
+            <div class="status-item new-release">
+               <a href="songs.html">
+                  <h3>View Songs</h3>
+                  <i class="fas fa-music background-icon"></i>
+               </a>
+               <div class="music-bars">
+                  <span></span><span></span><span></span><span></span><span></span>
+               </div>
+            </div>
+
+            <div class="status-item public-stats">
+               <div class="stat-content">
+                  <span class="live-dot"></span>
+                  <p><strong>1.2k</strong> Listening Now</p>
+               </div>
+            </div>
+
+            <div class="status-item trending-now">
+               <a href="upload.html">
+                  <h3>Upload Music <i class="fas fa-fire"></i></h3>
+                  <i class="fas fa-chart-line background-icon"></i>
+               </a>
+            </div>
+         </div>
+
+         <div class="hero-contact-footer">
+            <p class="ticker">
+               <span>NEW: Elijah Kitaka - "Daily Bundle" is now trending! | </span>
+               For Any Missing song Please Contact us on Whatsapp Number:
+               <a href="tel:0784729944">0784729944 / 0753739754</a>
+            </p>
+         </div>
+      </div>
+   </section>
+
+
+
+   <div class="song-container">
+      <div class="song-card">
+         <img src="Assets/dail bundle.jpg" alt="Song 1">
+         <div class="song-info">
+            <h2 class="song-title">Daily Bundle</h2>
+            <p class="song-artist">Elijah Kitaka</p>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+      <div class="song-card">
+         <img src="Assets/nakiriza.jpg" alt="song 2">
+         <div class="song-infor">
+            <h2 class="song-title">Nze Nakiriza</h2>
+            <p class="song-artist">Spice Diana & Vyroota</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+      <div class="song-card">
+         <img src="Assets/wesibade.jpg" alt="song 3">
+         <div class="song-infor">
+            <h2 class="song-title">Wesibadde</h2>
+            <p class="song-artist">Sheebah</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+      <div class="song-card">
+         <img src="Assets/good idear.jpg" alt="song 4">
+         <div class="song-infor">
+            <h2 class="song-title">Good Idea</h2>
+            <p class="song-artist">Dax Vibez ft. Elijah Kitaka </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+      <div class="song-card">
+         <img src="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Biggwa</h2>
+            <p class="song-artist">Liam Voice ft. Fik Fameica</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+
+      <div class="song-card">
+         <img src="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nzalina</h2>
+            <p class="song-artist">Feffe Bussi and Winnie Nwagi </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/kingsaha.jpg" alt="King Saha">
+         <div class="song-infor">
+            <h2 class="song-title">Kiwala Kya Landlord</h2>
+            <p class="song-artist">King Saha</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">See you to night</h2>
+            <p class="song-artist">Omega 256 and Cindy Sanyu </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">wrong place</h2>
+            <p class="song-artist">Joshua Baraka </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/vinka.jpg" alt="Lalala">
+         <div class="song-infor">
+            <h2 class="song-title">Vinka</h2>
+            <p class="song-artist">Lalala </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">daily undle</h2>
+            <p class="song-artist">Elijah Kitaka </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nzalina</h2>
+            <p class="song-artist">Feffe Bussi ft. Winnie Nwagi </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sheebah.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Dance for lord Remix</h2>
+            <p class="song-artist">Sheebah, Bentrom </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="so" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Morocco</h2>
+            <p class="song-artist">Joshua Baraka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kunsi</h2>
+            <p class="song-artist">Vyroota</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Wandika Awo</h2>
+            <p class="song-artist">Winnie Nwagi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Today</h2>
+            <p class="song-artist">livixon</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Waist 2.0(feat. Roets)</h2>
+            <p class="song-artist">Jozzi Ugandan,Entertaiment </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">only You</h2>
+            <p class="song-artist">Aaronix Music</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Daali</h2>
+            <p class="song-artist">Mudra D'Viral</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Mercy</h2>
+            <p class="song-artist">Andry Muzic </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">True Love</h2>
+            <p class="song-artist">Lydia JAzmine and Bwiza </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">DON'T YOU WORRY</h2>
+            <p class="song-artist">Revbwoy</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Lwe</h2>
+            <p class="song-artist">Pretty Banks</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Totta</h2>
+            <p class="song-artist">Kateleya & Kandle Music, Tracy Melon</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ki Uganda Kinyuma</h2>
+            <p class="song-artist">Wizzard OG</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nyweera</h2>
+            <p class="song-artist">Sheebah</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Sibyamanyi</h2>
+            <p class="song-artist">Lian Voice</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Desire</h2>
+            <p class="song-artist">Melissa Mulungi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Simanyi</h2>
+            <p class="song-artist">Kapeke</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Akati</h2>
+            <p class="song-artist">Dax Vibes</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Onfuna</h2>
+            <p class="song-artist">Aroma Music, Wine Nwagi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Akashana</h2>
+            <p class="song-artist">Omega 256</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Uganda Empya</h2>
+            <p class="song-artist">feffe Bussi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Border to Border</h2>
+            <p class="song-artist">Dreign michelle Kyalisiima</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Time Temale</h2>
+            <p class="song-artist">Gloria Bugie</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Munange</h2>
+            <p class="song-artist">Andey MUzic, walter Yt</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Wesibade</h2>
+            <p class="song-artist">Sheebah</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Daily Bundle</h2>
+            <p class="song-artist">Elijah Ktaka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tovayo</h2>
+            <p class="song-artist">Tracy Melon</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nze Nakiria</h2>
+            <p class="song-artist">Spice Diana, Vyroota</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ensi Yange</h2>
+            <p class="song-artist">Jim Nola MC Abedunego</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Slow Wine</h2>
+            <p class="song-artist">B2C</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Savanah</h2>
+            <p class="song-artist">Zulitums</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">juuju</h2>
+            <p class="song-artist">Dokta Brian</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Dive</h2>
+            <p class="song-artist">Al</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Batuleke</h2>
+            <p class="song-artist">Vinka, Winnie Nwagi, Ava peace</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Adam</h2>
+            <p class="song-artist">An-known</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tosobya</h2>
+            <p class="song-artist">Wizzard OG</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ku Nnya</h2>
+            <p class="song-artist">King Saha, mudra D'Viral</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ababadewo</h2>
+            <p class="song-artist">Pallaso</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Full Service</h2>
+            <p class="song-artist">Elijah kitaka, wennie Nwagi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Package</h2>
+            <p class="song-artist">Ykee Benda</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Do You Know</h2>
+            <p class="song-artist">Alien Skin Official</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Pologoma</h2>
+            <p class="song-artist">Nandor Love</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Embwa</h2>
+            <p class="song-artist">Neithan Nutly</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Onjagade Mulwaatu</h2>
+            <p class="song-artist">Jamie Ategeka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Wanika Bendera</h2>
+            <p class="song-artist">Elijah Kitaka , vinka,</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Masanyalaze</h2>
+            <p class="song-artist">Aaronix, Winnie Nwagi
+            <p>
+               <audio controls src="your-song-file.mp3"></audio>
+               <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nyash</h2>
+            <p class="song-artist">Gloria Bugie</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Dawa</h2>
+            <p class="song-artist">Elijah Kitaka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ekyatuvirako</h2>
+            <p class="song-artist">King Fa&Cyza Music</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Omezze</h2>
+            <p class="song-artist">B2C, Rema Namakula</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Hoozambe</h2>
+            <p class="song-artist">Mudra Dviral, D star</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kasolo</h2>
+            <p class="song-artist">Nato Boss</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Onomye</h2>
+            <p class="song-artist">Acidic Vokoz</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Oyaya</h2>
+            <p class="song-artist">Fik Fimeica</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nkwale</h2>
+            <p class="song-artist">David Lutalo</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nyamunyonyi</h2>
+            <p class="song-artist">Tpoul 256, Ray G</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Namala</h2>
+            <p class="song-artist">John Blaq</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-butto">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Byanene</h2>
+            <p class="song-artist">Jose Chameleon</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Bebbo</h2>
+            <p class="song-artist">King Zale Music</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Happy Moments</h2>
+            <p class="song-artist">Spyda Mc</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Lonely</h2>
+            <p class="song-artist">Joshua Baraka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Aye</h2>
+            <p class="song-artist">B2C</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Bwakulonda</h2>
+            <p class="song-artist">Prencess Amillah</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Shuu(Remix)</h2>
+            <p class="song-artist">Kapeke, Fik Fimieca</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Inside</h2>
+            <p class="song-artist">Mudra DVirral</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kankuteeke Mu</h2>
+            <p class="song-artist">Mikie Wine</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Full Package</h2>
+            <p class="song-artist">Cindy Sanyu</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Njalwala-Remix</h2>
+            <p class="song-artist">Aaronx, Sheebah, Sheebah</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nalumansi</h2>
+            <p class="song-artist">Trapex Boomin, 1981</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nonda</h2>
+            <p class="song-artist">Liam Voice</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Doozi</h2>
+            <p class="song-artist">Gravity Omutujju</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Freezing</h2>
+            <p class="song-artist">Lydia Jazmine, An-know</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Rolex</h2>
+            <p class="song-artist">Fik Fameica</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tompa</h2>
+            <p class="song-artist">Vinka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tell a friend</h2>
+            <p class="song-artist">Feffe Bussi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nyambula</h2>
+            <p class="song-artist">Alein Skin Official</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Digii IV</h2>
+            <p class="song-artist">Mr.Tee, Joshua baraka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Enaku Zino</h2>
+            <p class="song-artist">Radio & Weasel</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Love Commisioner</h2>
+            <p class="song-artist">Rema Namakula</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Byadala</h2>
+            <p class="song-artist">Nandor Love,Jowy Landa</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nanyomi</h2>
+            <p class="song-artist">Mun*G, Joshuab Baraka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Mulindwa</h2>
+            <p class="song-artist">Chris Evans Kaweesi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Plan(Genda Okole)</h2>
+            <p class="song-artist">Madluve Entertainmen</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Omunio</h2>
+            <p class="song-artist">Gravity Omutujju</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Finally</h2>
+            <p class="song-artist">Victor Ruz, Gloria Bugie</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Stylo</h2>
+            <p class="song-artist">The Mith, Charles & Frid</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">WayaSay</h2>
+            <p class="song-artist">Alien Skin</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Guwe Nze</h2>
+            <p class="song-artist">Caro Nantongo</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Whatsup</h2>
+            <p class="song-artist">Tomdee Ug</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Maria</h2>
+            <p class="song-artist">Vyroot</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Dinner</h2>
+            <p class="song-artist">Radio & Wesal</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Cry Baby</h2>
+            <p class="song-artist">Dj magic Touch</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Make History</h2>
+            <p class="song-artist">Andy Music</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">On The Move</h2>
+            <p class="song-artist">Denesi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Slow Motion</h2>
+            <p class="song-artist">J-wats, Dxniel Fxbes </p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">I Love You</h2>
+            <p class="song-artist">Acidic Vokoz</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tokola Erro</h2>
+            <p class="song-artist">Mudra Dviral</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nkulowoozako</h2>
+            <p class="song-artist">Eddy Kenzo</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Wanna Know(Nala..)</h2>
+            <p class="song-artist">Daddy Andrew</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Bikyuuka</h2>
+            <p class="song-artist">Pallaso</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Mwaka Enji</h2>
+            <p class="song-artist">Patol Lover</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Most Wanted</h2>
+            <p class="song-artist">Feffe Bussi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Fata</h2>
+            <p class="song-artist">Karole Kasita</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Uganda Ekula</h2>
+            <p class="song-artist">Hellena Nanjega</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Aliwa</h2>
+            <p class="song-artist">Bruna K & Naava Grey</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">I Must Shine</h2>
+            <p class="song-artist">Alien Skin</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Dance For Lord</h2>
+            <p class="song-artist">Betrom</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Mukama Aleese</h2>
+            <p class="song-artist">Ntate</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nakyala</h2>
+            <p class="song-artist">King Saha</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Muzafalu</h2>
+            <p class="song-artist">Gaaza Boss, Toppa</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Cry Baby</h2>
+            <p class="song-artist">Dj Magic</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Circumference</h2>
+            <p class="song-artist">Bebe Cool</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">The Interview Pt.1</h2>
+            <p class="song-artist">Feffe</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kubuuko</h2>
+            <p class="song-artist">Acidic Vokoz, Teen Lavv</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Olaba Otya</h2>
+            <p class="song-artist">Jenesis Kimera, Yung M..</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ghost Town Ro</h2>
+            <p class="song-artist">Bowman Aremwaki</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kinawolovu</h2>
+            <p class="song-artist">Nandor Love</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Neyanziza</h2>
+            <p class="song-artist">Sheebah</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Don Corleone</h2>
+            <p class="song-artist">Lukas Blacc, Navio</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kawala Kamooti</h2>
+            <p class="song-artist">Ava Peace</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kiwala Kya Landlord</h2>
+            <p class="song-artist">King Saha</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Start to Dance-Re...</h2>
+            <p class="song-artist">Orezi, Rema Namakula</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kapati</h2>
+            <p class="song-artist">Alien Skin Official, Sandrah Nax</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Yankozesa</h2>
+            <p class="song-artist">Gunna UG 5th Genna</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Yandalula</h2>
+            <p class="song-artist">Pawaboy AB</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Attetion</h2>
+            <p class="song-artist">Alloy Malik</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">See You To Night</h2>
+            <p class="song-artist">Omega 256, Cindy</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Wrong Place</h2>
+            <p class="song-artist">Joshua Baraka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Companion-Acount</h2>
+            <p class="song-artist">Boltn Serunjogi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Somebody</h2>
+            <p class="song-artist">Sheebah</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Dive In</h2>
+            <p class="song-artist">Joshua Baraka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Sure</h2>
+            <p class="song-artist">Lydia Jazmine, Jose Chamilion</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Love Tekawa</h2>
+            <p class="song-artist">Azawi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">I am Sorry</h2>
+            <p class="song-artist">Feffe Bussi, David Lutalo</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tulibayo</h2>
+            <p class="song-artist">Roffe Bussi, David Lutalo</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nze Naawe</h2>
+            <p class="song-artist">Geosteady</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">For Getting Me</h2>
+            <p class="song-artist">Wizzard OG</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ki Uganda Kinyuma</h2>
+            <p class="song-artist">Omega 256, Acidic Vokoz</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Binji</h2>
+            <p class="song-artist">An-known</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nawe</h2>
+            <p class="song-artist">Jowy Landa</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">If</h2>
+            <p class="song-artist">Nutty Neithan, pesh Fis...</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">No One</h2>
+            <p class="song-artist">Ava Peace, Jowy Landa</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Di Best</h2>
+            <p class="song-artist">Biggy Mc</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Oweishe</h2>
+            <p class="song-artist">Ray G</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Anawaza</h2>
+            <p class="song-artist">Fik Fimeica, jOSE Chamilion</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">tequiero</h2>
+            <p class="song-artist">Gloria Bugie</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">The Best</h2>
+            <p class="song-artist">Mudra Dviral</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">My Crush</h2>
+            <p class="song-artist">Echoled</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Hero</h2>
+            <p class="song-artist">Chattarbwoy</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Biggwa</h2>
+            <p class="song-artist">Liam Fimeica</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Turn On You</h2>
+            <p class="song-artist">Joan jonaj, Blinded</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ogenda Kukilaba</h2>
+            <p class="song-artist">Tracy Melon</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Jagana</h2>
+            <p class="song-artist">Gnl Zamba</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">OOPS!(WHO'S THERE)</h2>
+            <p class="song-artist">Bowman Aremwaki</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">The way you are</h2>
+            <p class="song-artist">Prince Indah, Jose Chameleon</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Love Enyuma</h2>
+            <p class="song-artist">King Saha</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nsangi</h2>
+            <p class="song-artist">Bolton Serunjogi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">6 AM</h2>
+            <p class="song-artist">J-wats</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Africana Party</h2>
+            <p class="song-artist">Ugaboy, Elijah Kitaka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Simanyi</h2>
+            <p class="song-artist">Zulitums, Irene Ntale</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Endlessly</h2>
+            <p class="song-artist">Igor bee</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Go-Remix</h2>
+            <p class="song-artist">Karole Kasita, Elijah Kitaka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kaba</h2>
+            <p class="song-artist">Kapeke</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Allergy</h2>
+            <p class="song-artist">Jenesis Kimera</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Waist</h2>
+            <p class="song-artist">Madluv Entertainment</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Oli Mudoma</h2>
+            <p class="song-artist">Dexta Rapper, Force h..</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nepanka</h2>
+            <p class="song-artist">Alein Skin, Sandrah Nax</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Engato</h2>
+            <p class="song-artist">Alloy Malik, Pryce Teeba</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Fallin</h2>
+            <p class="song-artist">Mike Mungu</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Good Idea</h2>
+            <p class="song-artist">Dax Vibez, Elijah Kitaka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Permission</h2>
+            <p class="song-artist">Aaronx</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Wanjaulo</h2>
+            <p class="song-artist">Drop pin, Vudu Children</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Love Yekivubuka</h2>
+            <p class="song-artist">Aida Vee</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ready</h2>
+            <p class="song-artist">Gloria Bugie</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Aura</h2>
+            <p class="song-artist">Jojo Hundred, Legh...</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Waist</h2>
+            <p class="song-artist">Bebe cool</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Pineapple Upside...</h2>
+            <p class="song-artist">Lilly Lou, Reada King</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Bilalamu</h2>
+            <p class="song-artist">Fik Fameica</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Angonza</h2>
+            <p class="song-artist">Vyroota</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Come to Daddy</h2>
+            <p class="song-artist">Acidic Vokoz</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Omukazi</h2>
+            <p class="song-artist">Nina Roz</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Talking Stage</h2>
+            <p class="song-artist">Azawi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nzigulawo</h2>
+            <p class="song-artist">Spice Diana</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">School Stylostem</h2>
+            <p class="song-artist">Pryce Teeba, Blinded..</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Where were we</h2>
+            <p class="song-artist">Alien Skin Official, knN</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Leero Luno</h2>
+            <p class="song-artist">Geinixy</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Neerete</h2>
+            <p class="song-artist">Dokta Brain, FYNO UG</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Gunkwase</h2>
+            <p class="song-artist">vink</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kisuku</h2>
+            <p class="song-artist">Jowy Landa</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Mpeke</h2>
+            <p class="song-artist">Aroma Music, An-known</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Red Tomato</h2>
+            <p class="song-artist">David Lutalo</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Mbilya</h2>
+            <p class="song-artist">Recho Rey</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tiktok Life</h2>
+            <p class="song-artist">King saha</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Physically</h2>
+            <p class="song-artist">Nu Neithan/p>
+               <audio controls src="your-song-file.mp3"></audio>
+               <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Wanula</h2>
+            <p class="song-artist">Tempurature Touch, Ava Peace</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Biribi Bang</h2>
+            <p class="song-artist">Ziza Bafana</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Soldier</h2>
+            <p class="song-artist">Roffe Wader, Blinded</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Control It</h2>
+            <p class="song-artist">Winnie Nwagi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Kindekele</h2>
+            <p class="song-artist">Lydia Jazmine</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Che Che</h2>
+            <p class="song-artist">FYNO UG</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Salute</h2>
+            <p class="song-artist">Tukus</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Better for me</h2>
+            <p class="song-artist">Dokta Brain</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ombaziza</h2>
+            <p class="song-artist">Mugabi Kenneth</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Teaser</h2>
+            <p class="song-artist"></p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tanimba</h2>
+            <p class="song-artist">Vyroota</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Hope & Love</h2>
+            <p class="song-artist">Eddy Kenzo, Mehran M..</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Badman</h2>
+            <p class="song-artist">Baranga, Stando,</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ku sure</h2>
+            <p class="song-artist">Dax Vibez, Azawi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Motivation</h2>
+            <p class="song-artist">Bebe Cool</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">ommala</h2>
+            <p class="song-artist">Dax Vibes</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Jetuvude Biwanvu</h2>
+            <p class="song-artist">Bad Sparksy</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tomanyi</h2>
+            <p class="song-artist">Pryce Teeba, Blinded Be..</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">In Da Bar</h2>
+            <p class="song-artist">Sean Offixial, Tojo</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Ekyange</h2>
+            <p class="song-artist">Elijah Kitaka/p>
+               <audio controls src="your-song-file.mp3"></audio>
+               <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Eden</h2>
+            <p class="song-artist">Jpc Again, Ava Peace</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Sija</h2>
+            <p class="song-artist">Dokta Brian/p>
+               <audio controls src="your-song-file.mp3"></audio>
+               <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">EverythingOn Me</h2>
+            <p class="song-artist">Pryce Teeba, Blinded</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Rule No.1</h2>
+            <p class="song-artist">Alien Skin Official</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Go Go Mama</h2>
+            <p class="song-artist">Rema namakula, Dokta Brain</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Tabbu</h2>
+            <p class="song-artist">Dax Vibez, Ava Peace</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Nina Ekibanja Ewan...</h2>
+            <p class="song-artist">Leghacity, Omunubi</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Olumba</h2>
+            <p class="song-artist">A Pass</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Joker</h2>
+            <p class="song-artist">Tukus</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Home</h2>
+            <p class="song-artist">Floss Da Artist</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+      <div class="song-card">
+         <img scr="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Bambega</h2>
+            <p class="song-artist">CWyne N</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+
+
+      <div class="song-card">
+         <img src="Assets/sad.jpg" alt="song 1">
+         <div class="song-infor">
+            <h2 class="song-title">Wrong Places</h2>
+            <p class="song-artist">Joshua Baraka</p>
+            <audio controls src="your-song-file.mp3"></audio>
+            <button class="download-button">Download</button>
+         </div>
+      </div>
+
+   </div>
+
+
+
+   <footer class="main-footer">
+      <div class="container footer-grid">
+
+         <!-- Column 1: Brand & Contact -->
+         <div class="footer-column contact-info">
+            <div class="logo">YAPS<span>MUSIC</span></div>
+            <p class="footer-desc">The #1 destination for latest Ugandan music, albums, and entertainment news.</p>
+            <ul class="contact-details">
+               <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+               <li><i class="fas fa-phone-alt"></i> +256 784729944</li>
+               <li><i class="fas fa-envelope"></i> info@yapsmusic.com</li>
+            </ul>
+         </div>
+
+         <!-- Column 2: Site Map (Navigation) -->
+         <div class="footer-column sitemap">
+            <h3>Site Map</h3>
+            <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#afrobeat">Afrobeat Hits</a></li>
+               <li><a href="#trending">Trending Charts</a></li>
+               <li><a href="#family">The Family (Artists)</a></li>
+               <li><a href="#news">Latest News</a></li>
+            </ul>
+         </div>
+
+         <!-- Column 3: Legal & Support -->
+         <div class="footer-column legal">
+            <h3>Legal</h3>
+            <ul>
+               <li><a href="#">Privacy Policy</a></li>
+               <li><a href="#">Terms of Service</a></li>
+               <li><a href="#">Copyright (DMCA)</a></li>
+               <li><a href="#">Cookie Policy</a></li>
+               <li><a href="#">Disclaimer</a></li>
+            </ul>
+         </div>
+
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+         <div class="container">
+            <p>&copy; 2026 Yaps Music Uganda. Developed for the Culture.</p>
+            <div class="footer-socials-minimal">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+         </div>
+      </div>
+   </footer>
+</body>
+
+</html>

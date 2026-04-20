@@ -24,7 +24,7 @@ mainSearch.addEventListener('input', (e) => {
 
     artistProfiles.forEach(profile => {
         const name = profile.querySelector('.artist-name').textContent.toLowerCase();
-        
+
         // Check if the typed name matches the artist name
         if (name.includes(searchTerm)) {
             profile.style.display = "block"; // Show match
