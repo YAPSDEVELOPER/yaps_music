@@ -20,6 +20,7 @@ body::before {
     background-position: center;
     background-size: cover;
     position: fixed;
+    background-attachment:fixed;
     top: 0;
     left: 0;
     width: 100%;
