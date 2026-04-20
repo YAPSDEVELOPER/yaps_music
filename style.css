@@ -15,7 +15,7 @@ body {
 
 body::before {
     content: "";
-    background-image: url('assets/yapdev.png');
+    background-image: url('Assets/yapdev.png');
     /* Replace with your image path */
     background-position: center;
     background-size: cover;
