@@ -150,3 +150,258 @@ input:focus, textarea:focus {
     font-weight: 700;
     transition: 0.3s;
 }
+
+    /* HERO SECTION */
+
+.hero{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  /* Transparent black cinematic background */
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)
+  ),
+  url("images/bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Optional overlay blur */
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+}
+
+/* PLANET CONTAINER */
+
+.planet-container{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PLANET */
+
+.planet{
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background:
+  url("images/earth.jpg");
+
+  background-size: cover;
+
+  box-shadow:
+  0 0 40px rgba(0,153,255,0.7),
+  inset -20px -20px 40px rgba(0,0,0,0.7);
+
+  animation: rotatePlanet 20s linear infinite;
+
+  z-index: 2;
+}
+
+@keyframes rotatePlanet{
+  from{
+    background-position: 0 0;
+  }
+
+  to{
+    background-position: 1000px 0;
+  }
+}
+
+/* ORBIT */
+
+.orbit{
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+
+  animation: orbitRotate 15s linear infinite;
+}
+
+@keyframes orbitRotate{
+  from{
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+/* ORBIT IMAGES */
+
+.orbit img{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 3px solid rgba(255,255,255,0.3);
+
+  box-shadow:
+  0 0 20px rgba(255,255,255,0.4);
+
+  transition: 0.4s;
+}
+
+.orbit img:hover{
+  transform: scale(1.2);
+
+  box-shadow:
+  0 0 30px cyan;
+}
+
+/* IMAGE POSITIONS */
+
+.img1{
+  top: -40px;
+  left: 170px;
+}
+
+.img2{
+  top: 40px;
+  right: -40px;
+}
+
+.img3{
+  top: 170px;
+  right: -40px;
+}
+
+.img4{
+  bottom: 40px;
+  right: -40px;
+}
+
+.img5{
+  bottom: -40px;
+  left: 170px;
+}
+
+.img6{
+  bottom: 40px;
+  left: -40px;
+}
+
+.img7{
+  top: 170px;
+  left: -40px;
+}
+
+.img8{
+  top: 40px;
+  left: -40px;
+}
+
+/* TEXT */
+
+.content{
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+.content h1{
+  font-size: 3rem;
+  margin-bottom: 10px;
+
+  text-shadow:
+  0 0 20px cyan;
+}
+
+.content p{
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .planet-container{
+    width: 350px;
+    height: 350px;
+  }
+
+  .orbit{
+    width: 300px;
+    height: 300px;
+  }
+
+  .planet{
+    width: 160px;
+    height: 160px;
+  }
+
+  .orbit img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .img1{
+    top: -30px;
+    left: 120px;
+  }
+
+  .img2{
+    top: 30px;
+    right: -30px;
+  }
+
+  .img3{
+    top: 120px;
+    right: -30px;
+  }
+
+  .img4{
+    bottom: 30px;
+    right: -30px;
+  }
+
+  .img5{
+    bottom: -30px;
+    left: 120px;
+  }
+
+  .img6{
+    bottom: 30px;
+    left: -30px;
+  }
+
+  .img7{
+    top: 120px;
+    left: -30px;
+  }
+
+  .img8{
+    top: 30px;
+    left: -30px;
+  }
+
+  .content h1{
+    font-size: 2rem;
+  }
+
+      }
