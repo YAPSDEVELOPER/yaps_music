@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <head>
     <title>About Us | YAPS Music</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="about.css">
@@ -11,7 +10,187 @@
     <link rel="stylesheet" href="small.css">
     <script src="script.js" defer></script>
     <script src="small.js" defer></script>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }body {
+  background: #000;
+  overflow-x: hidden;
+  color: white;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* ---------------- FOX STYLE ---------------- */
+
+.fox-scene {
+  background: linear-gradient(to top, #120800, #000);
+}
+
+.logo-box {
+  text-align: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+.logo-text {
+  font-size: 5rem;
+  font-weight: bold;
+  color: gold;
+  text-shadow: 0 0 20px rgba(255,215,0,0.6);
+}
+
+.small {
+  font-size: 2rem;
+  letter-spacing: 6px;
+}
+
+.searchlight {
+  position: absolute;
+  width: 180px;
+  height: 600px;
+  background: linear-gradient(to top, rgba(255,255,255,0.35), transparent);
+  clip-path: polygon(45% 100%, 55% 100%, 100% 0%, 0% 0%);
+  opacity: 0.5;
+  filter: blur(3px);
+}
+
+.light1 { left: -120px; bottom: -200px; animation: lightMove 6s infinite alternate; }
+.light2 { right: -120px; bottom: -200px; animation: lightMove2 7s infinite alternate; }
+
+@keyframes lightMove {
+  from { transform: rotate(-30deg); }
+  to { transform: rotate(30deg); }
+}
+
+@keyframes lightMove2 {
+  from { transform: rotate(30deg); }
+  to { transform: rotate(-30deg); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ---------------- UNIVERSAL FIXED ---------------- */
+
+.universal-scene {
+  background: radial-gradient(circle, #001133, #000);
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.space {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  0%,100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* PERFECT SPHERE PLANET */
+
+.planet-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.planet {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #4fc3f7, #0b2a6f);
+  box-shadow: 0 0 40px rgba(0,180,255,0.5);
+  animation: spin 12s linear infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ORBITING 8 IMAGES */
+
+.orbit {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbitRotate 18s linear infinite;
+}
+
+.orbit img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+@keyframes orbitRotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.universal-text {
+  position: absolute;
+  font-size: 3rem;
+  letter-spacing: 8px;
+  top: 70%;
+  text-shadow: 0 0 15px white;
+}
+
+  </style>
 </head>
+<body>  <!-- FOX STYLE -->  <section class="fox-scene">
+    <div class="searchlight light1"></div>
+    <div class="searchlight light2"></div><div class="logo-box">
+  <div class="logo-text small">YOUR</div>
+  <div class="logo-text">MOVIE</div>
+  <div class="logo-text small">STUDIO</div>
+</div>
+
+  </section>  <!-- UNIVERSAL FIXED -->  <section class="universal-scene"><div class="space" id="space"></div>
+
+<div class="planet-wrapper">
+  <div class="planet"></div>
+
+  <div class="orbit" id="orbit"></div>
+</div>
+
+<div class="universal-text">UNIVERSE</div>
+
+  
+
+
+    
 
 <body>
 
@@ -306,7 +485,46 @@
         <p>Join the YAPS community today and explore endless sound.</p>
         <a href="#" class="btn-alt">Get Started</a>
     </footer>
-    <script src="script.js"></script>
-</body>
+    </section>  <script>
+    // stars
+    const space = document.getElementById('space');
+    for (let i = 0; i < 150; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      space.appendChild(star);
+    }
 
-</html>
+    // 8 orbit images
+    const orbit = document.getElementById('orbit');
+    const images = [
+      "https://picsum.photos/100?1",
+      "https://picsum.photos/100?2",
+      "https://picsum.photos/100?3",
+      "https://picsum.photos/100?4",
+      "https://picsum.photos/100?5",
+      "https://picsum.photos/100?6",
+      "https://picsum.photos/100?7",
+      "https://picsum.photos/100?8"
+    ];
+
+    const radius = 180;
+
+    images.forEach((src, i) => {
+      const img = document.createElement('img');
+      const angle = (i / images.length) * Math.PI * 2;
+
+      const x = Math.cos(angle) * radius + 180;
+      const y = Math.sin(angle) * radius + 180;
+
+      img.src = src;
+      img.style.left = x + 'px';
+      img.style.top = y + 'px';
+
+      orbit.appendChild(img);
+    });
+  </script>
+</body>
+  </html>
+
